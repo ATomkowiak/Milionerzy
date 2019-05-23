@@ -2,6 +2,8 @@ import random
 import os
 import time
 import colorama
+import sys
+import pyfiglet
 import  termcolor
 class Pytania:
     def __init__(self):
@@ -167,27 +169,58 @@ class Pytania:
 
 
 
-kupa = Pytania()
-kupa.pytanie1(kupa.pytania05, kupa.odpowiedzi05, 500)
-if kupa.znacznik == True:
-    kupa.pytanie1(kupa.pytania1, kupa.odpowiedzi1, 1000)
+class Menu:
+    def __init__(self):
+        self.ascii_bannera = ''
+    def wyświetl(self):
+        print("Wpisz 'play' aby zagrać")
+        print("Kliknij 't' aby wyświetlić twórców ")
+        print("Kliknij 'q' aby wyjść")
+
+    def tworycy(self):
+        self.ascii_bannera = pyfiglet.figlet_format("TWÓRCY")
+        print(self.ascii_bannera)
+        print("Robert Kozak")
+        print("Antek Tomkowiak")
+        print("Patryk Kamiński")
+
+    def wyjście(self):
+        sys.exit()
+
+
+ascii_banner = pyfiglet.figlet_format("MILIONERZY")
+print(ascii_banner)
+menu = Menu()
+menu.wyświetl()
+ogor = input()
+if ogor == 'play':
+    os.system('clear')
+    kupa = Pytania()
+    kupa.pytanie1(kupa.pytania05, kupa.odpowiedzi05, 500)
     if kupa.znacznik == True:
-        kupa.pytanie1(kupa.pytania2, kupa.odpowiedzi2, 2000)
+        kupa.pytanie1(kupa.pytania1, kupa.odpowiedzi1, 1000)
         if kupa.znacznik == True:
-            kupa.pytanie1(kupa.pytania4, kupa.odpowiedzi4, 4000)
+            kupa.pytanie1(kupa.pytania2, kupa.odpowiedzi2, 2000)
             if kupa.znacznik == True:
-                kupa.pytanie1(kupa.pytania8, kupa.odpowiedzi8, 8000)
+                kupa.pytanie1(kupa.pytania4, kupa.odpowiedzi4, 4000)
                 if kupa.znacznik == True:
-                    kupa.pytanie1(kupa.pytania16, kupa.odpowiedzi16, 16000)
+                    kupa.pytanie1(kupa.pytania8, kupa.odpowiedzi8, 8000)
                     if kupa.znacznik == True:
-                        kupa.pytanie1(kupa.pytania32, kupa.odpowiedzi32, 32000)
+                        kupa.pytanie1(kupa.pytania16, kupa.odpowiedzi16, 16000)
                         if kupa.znacznik == True:
-                            kupa.pytanie1(kupa.pytania64, kupa.odpowiedzi64, 64000)
+                            kupa.pytanie1(kupa.pytania32, kupa.odpowiedzi32, 32000)
                             if kupa.znacznik == True:
-                                kupa.pytanie1(kupa.pytania125, kupa.odpowiedzi125, 125000)
+                                kupa.pytanie1(kupa.pytania64, kupa.odpowiedzi64, 64000)
                                 if kupa.znacznik == True:
-                                    kupa.pytanie1(kupa.pytania250, kupa.odpowiedzi250, 250000)
+                                    kupa.pytanie1(kupa.pytania125, kupa.odpowiedzi125, 125000)
                                     if kupa.znacznik == True:
-                                        kupa.pytanie1(kupa.pytania500, kupa.odpowiedzi500, 500000)
+                                        kupa.pytanie1(kupa.pytania250, kupa.odpowiedzi250, 250000)
                                         if kupa.znacznik == True:
-                                            kupa.pytanie1(kupa.pytania1000, kupa.odpowiedzi1000, 1000000)
+                                            kupa.pytanie1(kupa.pytania500, kupa.odpowiedzi500, 500000)
+                                            if kupa.znacznik == True:
+                                                kupa.pytanie1(kupa.pytania1000, kupa.odpowiedzi1000, 1000000)
+elif ogor == 't':
+    menu.tworycy()
+
+elif ogor == 'q':
+    menu.wyjście()
