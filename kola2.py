@@ -73,15 +73,15 @@ def kola(Pytania):
                     wybor=int(input())
                     if wybor == 1:
                         uzycie.append('fifty')
-                        fifty(self.pytanie)
+                        fifty()
                         break
                     elif wybor == 2:
                         uzycie.append('tele')
-                        telefon(self.pytanie)
+                        telefon()
                         break
                     elif wybor ==3:
                         uzycie.append('publika')
-                        przyjaciel(self.pytanie)
+                        przyjaciel()
                         break
                     elif wybor == 4:
                         print('wracamy do gry')
@@ -96,11 +96,11 @@ def kola(Pytania):
                         wybor=int(input())
                         if wybor == 2:
                             uzycie.append('tele')
-                            telefon(self.pytanie)
+                            telefon()
                             break
                         elif wybor ==3:
                             uzycie.append('publika')
-                            przyjaciel(self.pytanie)
+                            przyjaciel()
                             break
                         elif wybor == 4:
                             print('wracamy do gry')
@@ -114,11 +114,11 @@ def kola(Pytania):
                         wybor=int(input())
                         if wybor == 1:
                             uzycie.append('fifty')
-                            fifty(self.pytanie)
+                            fifty()
                             break
                         elif wybor ==3:
                             uzycie.append('publika')
-                            przyjaciel(self.pytanie)
+                            przyjaciel()
                             break
                         elif wybor == 4:
                             print('wracamy do gry')
@@ -132,11 +132,11 @@ def kola(Pytania):
                         wybor=int(input())
                         if wybor == 1:
                             uzycie.append('fifty')
-                            fifty(self.pytanie)
+                            fifty()
                             break
                         elif wybor == 2:
                             uzycie.append('tele')
-                            telefon(self.pytanie)
+                            telefon()
                             break
                         elif wybor == 4:
                             print('wracamy do gry')
@@ -151,7 +151,7 @@ def kola(Pytania):
                             wybor=int(input())
                             if wybor ==3:
                                 uzycie.append('publika')
-                                przyjaciel(self.pytanie)
+                                przyjaciel()
                                 break
                             elif wybor == 4:
                                 print('wracamy do gry')
@@ -164,7 +164,7 @@ def kola(Pytania):
                             wybor=int(input())
                             if wybor == 2:
                                 uzycie.append('tele')
-                                telefon(self.pytanie)
+                                telefon()
                                 break
                             elif wybor == 4:
                                 print('wracamy do gry')
@@ -178,7 +178,7 @@ def kola(Pytania):
                             wybor=int(input())
                             if wybor == 1:
                                 uzycie.append('fifty')
-                                fifty(self.pytanie)
+                                fifty()
                                 break
                             elif wybor == 4:
                                 print('wracamy do gry')
