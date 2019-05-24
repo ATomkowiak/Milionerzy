@@ -141,6 +141,9 @@ class Pytania:
             self.los = random.choice(self.o)
             self.wyniki[str(self.abcd[i-1])] = str(odpowiedzi[self.pytanie] [self.los])
             self.wyniki1[str(self.abcd[i-1])] = self.los
+            if 0 + self.wyniki1[str(self.abcd[i-1])] == 0:
+                self.poprawna = self.abcd[i - 1]
+            print(self.poprawna)
             #print(self.wyniki1)
             #print(self.wyniki)
             self.o.remove(self.los) #usuwamy z listy numer odpowiedzi w celu braku powtorzen
@@ -156,14 +159,17 @@ class Pytania:
                 temp_d=3
                 if temp == temp_b:
                     pytania.wyniki1.remove(2,3)
+                    pytania.wyniki.remove(2,3)
                     print(Pytania.wyniki)
                     break
                 elif temp == temp_c:
                     pytania.wyniki1.remove(1,3)
+                    pytania.wyniki.remove(2,3)
                     print(Pytania.wyniki)
                     break
                 elif temp==temp_d:
                     pytania.wyniki1.remove(1,2)
+                    pytania.wyniki.remove(2,3)
                     print(Pytania.wyniki)
                     break
         def telefon(Pytania):
