@@ -36,7 +36,7 @@ def telefon(Pytania):
             pytania.wyniki1.remove(0,1,2)
             print(Pytania.wyniki)
             break
-def przyjaciel(Pytania):
+def publika(Pytania):
         #### funkcja pozwala użyć koła pomoc od publicznośći i zwraca prawidłową odpowiedź z 60% poprawnością
         prawd=random.random()
         while True:
@@ -81,7 +81,7 @@ def kola(Pytania):
                         break
                     elif wybor ==3:
                         uzycie.append('publika')
-                        przyjaciel()
+                        publika()
                         break
                     elif wybor == 4:
                         print('wracamy do gry')
@@ -100,7 +100,7 @@ def kola(Pytania):
                             break
                         elif wybor ==3:
                             uzycie.append('publika')
-                            przyjaciel()
+                            publika()
                             break
                         elif wybor == 4:
                             print('wracamy do gry')
@@ -118,7 +118,7 @@ def kola(Pytania):
                             break
                         elif wybor ==3:
                             uzycie.append('publika')
-                            przyjaciel()
+                            publika()
                             break
                         elif wybor == 4:
                             print('wracamy do gry')
@@ -151,7 +151,7 @@ def kola(Pytania):
                             wybor=int(input())
                             if wybor ==3:
                                 uzycie.append('publika')
-                                przyjaciel()
+                                publika()
                                 break
                             elif wybor == 4:
                                 print('wracamy do gry')

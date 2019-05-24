@@ -143,58 +143,45 @@ class Pytania:
             self.wyniki1[str(self.abcd[i-1])] = self.los
             if 0 + self.wyniki1[str(self.abcd[i-1])] == 0:
                 self.poprawna = self.abcd[i - 1]
-            print(self.poprawna)
+                print(self.poprawna)
             #print(self.wyniki1)
             #print(self.wyniki)
             self.o.remove(self.los) #usuwamy z listy numer odpowiedzi w celu braku powtorzen
+
         def fifty(Pytania):
             ####funkcja pozwala na użycie koła ratunkowego pół na pół w grze milionerzyself.
             #### Usuwa ona 2 losowo wybrane błędne odpowiedzi i wyświetla jedną błędną i jedną prawidłową ułatwiając wybór graczowiself.
             #### abcd to kolejne odpowiedzi w danym pytaniu
             print('Skorzystałeś z koła pół na pół, oto pozostałe odpowiedzi')
-            temp=random.randrange(1,3)
             while True:
-                temp_b=1
-                temp_c=2,
-                temp_d=3
-                if temp == temp_b:
-                    pytania.wyniki1.remove(2,3)
-                    pytania.wyniki.remove(2,3)
-                    print(Pytania.wyniki)
-                    break
-                elif temp == temp_c:
-                    pytania.wyniki1.remove(1,3)
-                    pytania.wyniki.remove(2,3)
-                    print(Pytania.wyniki)
-                    break
-                elif temp==temp_d:
-                    pytania.wyniki1.remove(1,2)
-                    pytania.wyniki.remove(2,3)
-                    print(Pytania.wyniki)
-                    break
+                self.abcd.remove(self.poprawna)
+                self.inna=random.sample(''.join(self.abcd), 1)
+                print(self.poprawna, ''.join(self.inna))
+                break
+
         def telefon(Pytania):
             #### funkcja zwraca prawdidłową odpowiedź z 75% poprawnością
-            prop = random.random()
+            self.prop = random.random()
             while True:
-                if prop>0.25:
-                    pytania.wyniki1.remove(1,2,3)
-                    print(Pytania.wyniki)
+                if self.prop>0.25:
+                    print(self.poprawna)
                     break
                 else:
-                    pytania.wyniki1.remove(0,1,2)
-                    print(Pytania.wyniki)
+                    self.abcd.remove(self.poprawna)
+                    self.inna=random.sample(''.join(self.abcd), 1)
+                    print(''.join(self.inna))
                     break
-        def przyjaciel(Pytania):
+        def publika(Pytania):
                 #### funkcja pozwala użyć koła pomoc od publicznośći i zwraca prawidłową odpowiedź z 60% poprawnością
-                prawd=random.random()
+                self.prawd=random.random()
                 while True:
-                    if prawd>0.4:
-                        pytania.wyniki1.remove(1,2,3)
-                        print(Pytania.wyniki)
+                    if self.prawd>0.4:
+                        print(self.poprawna)
                         break
                     else:
-                        pytania.wyniki1.remove(0,1,2)
-                        print(Pytania.wyniki)
+                        self.abcd.remove(self.poprawna)
+                        self.inna=random.sample(''.join(self.abcd), 1)
+                        print(''.join(self.inna))
                         break
         def kola(Pytania):
             #### funkcja pozwala wyśwetlić koła ratunkowe w grze milionerzy oraz skorzystać z nich a także odejść ze zdobytą już kwotą
@@ -204,13 +191,13 @@ class Pytania:
                 print('Jeśli chcesz odejść z kwotą gwarantowaną wpisz kwota')
                 time.sleep(1)
                 print('Jeśli chcesz grać dalej bez koła wpisz gram')
-                mozliwosc_kola = input()
-                if mozliwosc_kola == 'kwota':
+                self.mozliwosc_kola = input()
+                if self.mozliwosc_kola == 'kwota':
                     print("Gratulacje!")
                     time.sleep(1)
                     print("Wygrałeś", pytania.hajs, 'zł')
                     menu.wyjście()
-                elif mozliwosc_kola == 'koło':
+                elif self.mozliwosc_kola == 'koło':
                     if len(uzycie)==0:
                         while True:
                             print('Którego koła chcesz użyć?')
@@ -221,15 +208,15 @@ class Pytania:
                             wybor=int(input())
                             if wybor == 1:
                                 uzycie.append('fifty')
-                                fifty(self.pytanie)
+                                fifty(self.pytanie1)
                                 break
                             elif wybor == 2:
                                 uzycie.append('tele')
-                                telefon(self.pytanie)
+                                telefon(self.pytanie1)
                                 break
                             elif wybor ==3:
                                 uzycie.append('publika')
-                                przyjaciel(self.pytanie)
+                                publika(self.pytanie1)
                                 break
                             elif wybor == 4:
                                 print('wracamy do gry')
@@ -244,11 +231,11 @@ class Pytania:
                                 wybor=int(input())
                                 if wybor == 2:
                                     uzycie.append('tele')
-                                    telefon(self.pytanie)
+                                    telefon(self.pytanie1)
                                     break
                                 elif wybor ==3:
                                     uzycie.append('publika')
-                                    przyjaciel(self.pytanie)
+                                    publika(self.pytanie)
                                     break
                                 elif wybor == 4:
                                     print('wracamy do gry')
@@ -266,7 +253,7 @@ class Pytania:
                                     break
                                 elif wybor ==3:
                                     uzycie.append('publika')
-                                    przyjaciel(self.pytanie)
+                                    publika(self.pytanie)
                                     break
                                 elif wybor == 4:
                                     print('wracamy do gry')
@@ -299,7 +286,7 @@ class Pytania:
                                     wybor=int(input())
                                     if wybor ==3:
                                         uzycie.append('publika')
-                                        przyjaciel(self.pytanie)
+                                        publika(self.pytanie)
                                         break
                                     elif wybor == 4:
                                         print('wracamy do gry')
@@ -347,7 +334,7 @@ class Pytania:
                         elif len(uzycie)==3:
                             print('nie masz już kół')
                             break
-                elif mozliwosc_kola == 'gram':
+                elif self.mozliwosc_kola == 'gram':
                     print('wracamy do gry')
                     break
 
