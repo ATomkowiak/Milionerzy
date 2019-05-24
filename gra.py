@@ -6,7 +6,7 @@ import colorama
 import sys
 import pyfiglet
 import  termcolor
-from kola2 import kola, fifty, telefon, przyjaciel
+from kola2 import fifty, telefon, przyjaciel, kola
 class Pytania:
     def __init__(self):
         self.wyniki = {} #lista wynikow w ktorej sa odpowiedzi slowne
@@ -152,7 +152,7 @@ class Pytania:
         time.sleep(1)
         print("C)", self.wyniki['c'],"D)" , self.wyniki['d'])
         time.sleep(1)
-        kola(pytania[pytanie1.pytanie])
+        kola(pytania[self.pytanie])
         self.odpowiedz_użytkownika = str(input("Twoja odpowiedź to: "))
 
         # sprawdzenie czy dobra odpowiedz
