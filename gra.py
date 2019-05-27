@@ -195,7 +195,7 @@ class Pytania:
                 if self.mozliwosc_kola == 'kwota':
                     print("Gratulacje!")
                     time.sleep(1)
-                    print("Wygrałeś", pytania.hajs, 'zł')
+                    print("Wygrałeś", self.hajs, 'zł')
                     menu.wyjście()
                 elif self.mozliwosc_kola == 'koło':
                     if len(uzycie)==0:
