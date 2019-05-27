@@ -143,7 +143,7 @@ class Pytania:
             self.wyniki1[str(self.abcd[i-1])] = self.los
             if 0 + self.wyniki1[str(self.abcd[i-1])] == 0:
                 self.poprawna = self.abcd[i - 1]
-                print(self.poprawna)
+               # print(self.poprawna)
             #print(self.wyniki1)
             #print(self.wyniki)
             self.o.remove(self.los) #usuwamy z listy numer odpowiedzi w celu braku powtorzen
