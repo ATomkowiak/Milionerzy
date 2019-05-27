@@ -133,6 +133,10 @@ class Pytania:
 
         self.odpowiedzi1000 = [["po 12", "po 5", "po 18", "po 9"],
                                ["Theda Bara", "Pola Negri", "Mae West", "Mary Pickford"]]
+        ####prowadzacy
+        self.hubert_correct = ["Mam złą wiadomość. Będziesz się musiał jeszcze trochę pomęczyć. To dobra odpowiedź!","Nie lubię pożegnań. Na szczęście teraz żadnego nie będzie. Poprawna odpowiedź!","Ta odpowiedź nie jest... niepoprawna. Grasz dalej!","Jeśli miałeś złe przeczucia, to mam złe przeczucie, że były błędne. Dobra odpowiedź!","Fajnie się grało, ale trzeba będzie pograć jeszcze trochę. To dobra odpowiedź!","Jedni do domu wracają limuzyną, inni PKS-em. Ty masz szansę być wśród tych drugich. To dobra odpowiedź!","Szczerość bywa źle odbierana i tym razem tak nie będzie, bo szczerze, to poprawna odpowiedź!","Ta gra przypomina mi pracę Syzyfa, a to dlatego, że ciągle idziesz w górę. Poprawna odpowiedź!","Mówią, że na błędach się uczymy. W takim razie jak dotąd niczego się dzisiaj nie nauczysz. To dobra odpowiedź","Myślałeś nad inną odpowiedzią? Jeśli tak, to dobrze. Dobrze, że jej nie wybrałeś, bo odpowiedziałeś poprawnie!","Przyszedł właśnie ten trudny moment, kiedy muszę Ci powiedzieć, że to dobra odpowiedź!",
+"Poprawna odpowiedź!", "Zła odpowiedź. Żartowałem, dobra!","Ciężka sprawa... Bo coraz cięższa staje się torba, z którą opuścisz program. Dobra odpowiedź!","Każda podróż się kiedyś kończy. Ale twoja w tym programie jeszcze nie zamierza! To dobra odpowiedź!"]
+self.hubert_incorrect = ["Wszystko co dobre kiedyś się kończy. To zła odpowiedź", "Może innym razem. Niepoprawna odpowiedź","Zła odpowiedź", "Gra dla ciebie się kończy. Zła odpowiedź"]
     def pytanie1(self, pytania, odpowiedzi, nagroda, ):
         self.pytanie = random.randint(0, len(pytania) - 1) #losowanie pytania
         self.o = [0, 1, 2, 3] #numery pytan, gdzie 0 jest zawsze poprawne
@@ -352,7 +356,7 @@ class Pytania:
         # sprawdzenie czy dobra odpowiedz
         if self.wyniki1[self.odpowiedz_użytkownika] == 0:
             self.hajs = nagroda
-            print("Brawo ziom, masz na koncie", self.hajs, "zł")
+            print(random.choice(self.hubert_correct), self.hajs, "zł")
             self.znacznik = True
             time.sleep(3)
             os.system('clear')
@@ -360,7 +364,7 @@ class Pytania:
 
         elif self.wyniki1[self.odpowiedz_użytkownika] == 1 or self.wyniki1[self.odpowiedz_użytkownika] == 2 or \
                 self.wyniki1[self.odpowiedz_użytkownika] == 3:
-            print("przejebałeś stary masz na koncie", self.hajs,"zł" )
+            print(random.choice(self.hubert_incorrect), self.hajs,"zł" )
             self.znacznik = False
 
 
