@@ -145,10 +145,10 @@ class Pytania:
          "Ta gra przypomina mi pracę Syzyfa, a to dlatego, że ciągle idziesz w górę. Poprawna odpowiedź!",
          "Mówią, że na błędach się uczymy. W takim razie jak dotąd niczego się dzisiaj nie nauczysz. To dobra odpowiedź", 
          "Myślałeś nad inną odpowiedzią? Jeśli tak, to dobrze. Dobrze, że jej nie wybrałeś, bo odpowiedziałeś poprawnie!", 
-         "Przyszedł właśnie ten trudny moment, kiedy muszę Ci powiedzieć, że to dobra odpowiedź!", "Poprawna odpowiedź!", 
+         "Przyszedł właśnie ten trudny moment, kiedy muszę Ci powiedzieć, że to dobra odpowiedź!", "Poprawna odpowiedź!",
          "Zła odpowiedź. Żartowałem, dobra!", "Ciężka sprawa... Bo coraz cięższa staje się torba, z którą opuścisz program. Dobra odpowiedź!",
          "Każda podróż się kiedyś kończy. Ale twoja w tym programie jeszcze nie zamierza! To dobra odpowiedź!"]
-		 self.hubert_incorrect = ["Wszystko co dobre kiedyś się kończy. To zła odpowiedź", "Niestety, niepoprawna odpowiedź",
+		self.hubert_incorrect = ["Wszystko co dobre kiedyś się kończy. To zła odpowiedź", "Niestety, niepoprawna odpowiedź",
          "Mam dobrą wiadomość. Możesz jechać do domu, bo to zła odpowiedź", 
          "Jak mówił poeta... nie znam się na poezji, a ta odpowiedź jest niepoprawna", "Jeśli to był strzał, to niecelny. To zła odpowiedź", 
          "Na błędach się uczymy,więc nauczysz się  czegoś z tej gry, bo to zła odpowiedź" , "Może innym razem. Niepoprawna odpowiedź", 
@@ -373,7 +373,7 @@ class Pytania:
         # sprawdzenie czy dobra odpowiedz
         if self.wyniki1[self.odpowiedz_użytkownika] == 0:
             self.hajs = nagroda
-            print(random.choice(self.hubert_correct),"Masz na koncie" self.hajs, "zł")
+            print(random.choice(self.hubert_correct),"Masz na koncie", self.hajs, "zł")
             self.znacznik = True
             time.sleep(3)
             os.system('clear')
@@ -381,7 +381,7 @@ class Pytania:
 
         elif self.wyniki1[self.odpowiedz_użytkownika] == 1 or self.wyniki1[self.odpowiedz_użytkownika] == 2 or \
                 self.wyniki1[self.odpowiedz_użytkownika] == 3:
-            print(random.choice(self.hubert_incorrect),"Zdobyłeś" self.hajs,"zł" )
+            print(random.choice(self.hubert_incorrect),"Zdobyłeś", self.hajs,"zł" )
             self.znacznik = False
 
 
