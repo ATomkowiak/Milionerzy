@@ -162,6 +162,7 @@ class Pytania:
         def telefon(Pytania):
             #### funkcja zwraca prawdidłową odpowiedź z 75% poprawnością
             self.prop = random.random()
+            print('Hmmmm myślę że to:')
             while True:
                 if self.prop>0.25:
                     print(self.poprawna)
@@ -174,6 +175,7 @@ class Pytania:
         def publika(Pytania):
                 #### funkcja pozwala użyć koła pomoc od publicznośći i zwraca prawidłową odpowiedź z 60% poprawnością
                 self.prawd=random.random()
+                print('Większość publiczności wskazała:')
                 while True:
                     if self.prawd>0.4:
                         print(self.poprawna)
