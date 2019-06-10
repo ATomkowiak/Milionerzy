@@ -6,6 +6,19 @@ import sys
 import pyfiglet
 from tkinter import *
 import  termcolor
+screen = Tk()
+screen.geometry("230x298")
+screen.resizable(0, 0)
+screen.title("Milionerzy")
+large_font = ('Verdana', 15)
+
+x = 230
+y = 300
+e_y = 64
+screen.y = BooleanVar()
+button_x = (x/4)
+button_y = ((y - e_y)/5)
+
 class Pytania:
     def __init__(self):
         self.wyniki = {} #lista wynikow w ktorej sa odpowiedzi slowne
@@ -148,9 +161,19 @@ class Pytania:
         time.sleep(1)
         print(pytania[self.pytanie])
         time.sleep(1)
-        print("A)", self.wyniki['a'], "B)", self.wyniki['b'])
-        time.sleep(1)
-        print("C)", self.wyniki['c'],"D)" , self.wyniki['d'])
+        b1 = Button(screen, text=("A",self.wyniki['a']) , font=large_font, highlightbackground="black", fg="white")
+        b1.place(height=button_y, width=button_x, x=0, y=e_y + button_y + button_y + button_y - 1)
+
+        b2 = Button(screen, text=("B)", self.wyniki['b']), font=large_font, highlightbackground="black", fg="white")
+        b2.place(height=button_y, width=button_x, x=button_x, y=e_y + button_y + button_y + button_y - 1)
+
+        b3 = Button(screen, text=("C)", self.wyniki['c']), font=large_font, highlightbackground="black", fg="white")
+        b3.place(height=button_y, width=button_x, x=button_x + , y= 0)
+
+        b4 = Button(screen, text=("D)" , self.wyniki['d']), font=large_font, highlightbackground="black", fg="white")
+        b4.place(height=button_y, width=button_x, x=button_x + button_x + button_x,
+                 y=e_y + button_y + button_y + button_y - 1)
+
         time.sleep(1)
         self.odpowiedz_użytkownika = str(input("Twoja odpowiedź to: "))
 
@@ -227,29 +250,9 @@ elif ogor == 't':
 elif ogor == 'q':
     menu.wyjście()
 
-screen = Tk()
-screen.geometry("230x298")
-screen.resizable(0, 0)
-screen.title("Milionerzy")
-large_font = ('Verdana', 15)
-
-x = 230
-y = 300
-e_y = 64
-screen.y = BooleanVar()
-button_x = (x/4)
-button_y = ((y - e_y)/5)
 
 
 
-b1 = Button(screen, text="1", font=large_font, highlightbackground = "black", fg = "white")
-b1.place(height=button_y, width=button_x, x=0, y=e_y + button_y + button_y + button_y - 1)
 
-b2 = Button(screen, text="2", font=large_font, highlightbackground = "black", fg = "white")
-b2.place(height=button_y, width=button_x, x=button_x, y=e_y + button_y + button_y + button_y -1)
 
-b3 = Button(screen, text="3", font=large_font, highlightbackground = "black", fg = "white")
-b3.place(height=button_y, width=button_x, x=button_x + button_x, y=e_y + button_y + button_y + button_y - 1)
-
-bdiv = Button(screen, text="+", font=large_font, highlightbackground = "orange", fg = "white")
-bdiv.place(height=button_y, width=button_x, x=button_x + button_x + button_x, y=e_y + button_y + button_y + button_y - 1)
+screen.mainloop()
