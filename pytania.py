@@ -6,6 +6,7 @@ import sys
 import pyfiglet
 from tkinter import *
 import  termcolor
+#NAPRAW KTOS TEN JEBANY BLAD ZE NIE DZIALA CALY PROGRAM
 screen = Tk()
 screen.geometry("230x298")
 screen.resizable(0, 0)
