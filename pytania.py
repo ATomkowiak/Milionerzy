@@ -227,7 +227,29 @@ elif ogor == 't':
 elif ogor == 'q':
     menu.wyjście()
 
-bpz = Tk()
-bpz.geometry("230x298")
-bpz.resizable(0, 0)
-bpz.title("Kalkulator")
+screen = Tk()
+screen.geometry("230x298")
+screen.resizable(0, 0)
+screen.title("Milionerzy")
+large_font = ('Verdana', 15)
+
+x = 230
+y = 300
+e_y = 64
+screen.y = BooleanVar()
+button_x = (x/4)
+button_y = ((y - e_y)/5)
+
+
+
+b1 = Button(screen, text="1", font=large_font, highlightbackground = "black", fg = "white")
+b1.place(height=button_y, width=button_x, x=0, y=e_y + button_y + button_y + button_y - 1)
+
+b2 = Button(screen, text="2", font=large_font, highlightbackground = "black", fg = "white")
+b2.place(height=button_y, width=button_x, x=button_x, y=e_y + button_y + button_y + button_y -1)
+
+b3 = Button(screen, text="3", font=large_font, highlightbackground = "black", fg = "white")
+b3.place(height=button_y, width=button_x, x=button_x + button_x, y=e_y + button_y + button_y + button_y - 1)
+
+bdiv = Button(screen, text="+", font=large_font, highlightbackground = "orange", fg = "white")
+bdiv.place(height=button_y, width=button_x, x=button_x + button_x + button_x, y=e_y + button_y + button_y + button_y - 1)
