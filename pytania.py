@@ -168,7 +168,7 @@ class Pytania:
         b2.place(height=button_y, width=button_x, x=button_x, y=e_y + button_y + button_y + button_y - 1)
 
         b3 = Button(screen, text=("C)", self.wyniki['c']), font=large_font, highlightbackground="black", fg="white")
-        b3.place(height=button_y, width=button_x, x=button_x + , y= 0)
+        b3.place(height=button_y, width=button_x, x=button_x + button_x , y= 0)
 
         b4 = Button(screen, text=("D)" , self.wyniki['d']), font=large_font, highlightbackground="black", fg="white")
         b4.place(height=button_y, width=button_x, x=button_x + button_x + button_x,
