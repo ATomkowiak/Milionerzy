@@ -6,6 +6,7 @@ import colorama
 import sys
 import pyfiglet
 import  termcolor
+from tkinter import *
 uzycie= [] #### zmienna która zapisuje użyte koła
 
 class Pytania:
@@ -137,7 +138,7 @@ class Pytania:
         self.pytanie = random.randint(0, len(pytania) - 1) #losowanie pytania
         self.o = [0, 1, 2, 3] #numery pytan, gdzie 0 jest zawsze poprawne
 
-        for i in range(1, 5): #tworzenie i losowanie odpowiedzi
+        for i in range(1,5): #tworzenie i losowanie odpowiedzi
             self.los = random.choice(self.o)
             self.wyniki[str(self.abcd[i-1])] = str(odpowiedzi[self.pytanie] [self.los])
             self.wyniki1[str(self.abcd[i-1])] = self.los
