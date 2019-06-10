@@ -4,6 +4,7 @@ import time
 import colorama
 import sys
 import pyfiglet
+from tkinter import *
 import  termcolor
 class Pytania:
     def __init__(self):
@@ -81,6 +82,7 @@ class Pytania:
 
         self.odpowiedzi16 = [["11 zawodników", "9 zawodników", "10 zawodników", "12 zawodników"],
                              ["Ludwik Węgierski", "Leszek Czarny", "Henryk Walezy", "Henryk IV Probus"],
+
                              ["dwuścienny", "rozwarty", "skierowany", "pełny"],
                              ["Abraham Lincoln", "Greorge Washington", "Millard Fillmore", "William Henry Harrison"],
                              ["remiza", "zimorodka", "perkoza", "jemiołuszki"]]
@@ -224,3 +226,8 @@ elif ogor == 't':
 
 elif ogor == 'q':
     menu.wyjście()
+
+bpz = Tk()
+bpz.geometry("230x298")
+bpz.resizable(0, 0)
+bpz.title("Kalkulator")
