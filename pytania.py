@@ -146,9 +146,33 @@ class Pytania:
         time.sleep(1)
         print(pytania[self.pytanie])
         time.sleep(1)
+<<<<<<< Updated upstream
         print("A)", self.wyniki['a'], "B)", self.wyniki['b'])
         time.sleep(1)
         print("C)", self.wyniki['c'],"D)" , self.wyniki['d'])
+=======
+        def naciskasz_a():
+            Pytania.odpowiedz_użytkownika= 'twoja odpowiedź to a'
+        def naciskasz_b():
+            Pytania.odpowiedz_użytkownika= 'twoja odpowiedź to b'
+        def naciskasz_c():
+            Pytania.odpowiedz_użytkownika= 'twoja odpowiedź to c'
+        def naciskasz_d():
+            Pytania.odpowiedz_użytkownika= 'twoja odpowiedź to d'
+        b1 = Button(screen, text=("A",self.wyniki['a']) , font=large_font, highlightbackground="black", fg="white", Command=naciskasz_a)
+        b1.place(height=button_y, width=button_x, x=0, y=e_y + button_y + button_y + button_y - 1)
+
+        b2 = Button(screen, text=("B)", self.wyniki['b']), font=large_font, highlightbackground="black", fg="white", Command=naciskasz_b)
+        b2.place(height=button_y, width=button_x, x=button_x, y=e_y + button_y + button_y + button_y - 1)
+
+        b3 = Button(screen, text=("C)", self.wyniki['c']), font=large_font, highlightbackground="black", fg="white", Command=naciskasz_c)
+        b3.place(height=button_y, width=button_x, x=button_x + button_x , y= 0)
+
+        b4 = Button(screen, text=("D)" , self.wyniki['d']), font=large_font, highlightbackground="black", fg="white", Command=naciskasz_d)
+        b4.place(height=button_y, width=button_x, x=button_x + button_x + button_x,
+                 y=e_y + button_y + button_y + button_y - 1)
+
+>>>>>>> Stashed changes
         time.sleep(1)
         self.odpowiedz_użytkownika = str(input("Twoja odpowiedź to: "))
 
@@ -223,4 +247,15 @@ elif ogor == 't':
     menu.tworycy()
 
 elif ogor == 'q':
+<<<<<<< Updated upstream
     menu.wyjście()
+=======
+    menu.wyjście()
+
+
+
+
+
+
+screen.mainloop()
+>>>>>>> Stashed changes
